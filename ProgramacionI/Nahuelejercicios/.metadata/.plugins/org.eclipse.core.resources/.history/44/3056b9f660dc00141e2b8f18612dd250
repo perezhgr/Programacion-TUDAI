@@ -1,0 +1,14 @@
+//Paridad de un valor
+
+public class ejemplo {
+
+		public static void main (String [] args) {
+			int valor = 2;
+			if (valor % 2 == 0) {
+				System.out.println("El valor " + valor + " es par");
+			}
+			else {
+			System.out.println("El valor " + valor + " es impar");
+			}
+		}
+}

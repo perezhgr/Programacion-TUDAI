@@ -1,0 +1,38 @@
+// Escribir un método que multiplique dos números. Usar ese
+// método para calcular la potencia n de un número ingresado
+// por teclado.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+public class ejercicio2 {
+	public static void main(String[] args) {
+		int valor = 0;
+		int potencia = 0;
+		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+		
+		do {
+			try {
+				System.out.println("Introduzca el numero del que desea obtener la potencia");
+		        valor = new Integer(entrada.readLine());
+		        System.out.println("Introduzca la potencia");
+		        potencia = new Integer(entrada.readLine());
+		        System.out.println(valor + " ^ " + potencia + " = " + multiplicacion(valor, potencia));
+			}
+			catch (Exception exc) {
+				System.out.println("Ingrese un valor valido");
+			}
+		}
+		while (!((valor < 0) && (valor >= 0)) && !((potencia < 0) && (potencia >= 0)));
+		
+	}
+
+	public static int multiplicacion(int valor, int potencia){
+		int resultado = valor;
+		
+		for (int i = 1 ; i < potencia; i++) {
+			resultado = resultado * valor;
+		}
+		return resultado;
+    }
+}
